@@ -12,10 +12,17 @@
 #include "Solution.hpp"
 #include "initializerlist.hpp"
 using namespace std;
-
+void print(vector<int>::iterator beg, vector<int>::iterator end){
+    if(beg!=end){
+        cout<<*beg<<" ";
+        print(next(beg),end);
+    }
+}
 
 
 int main(){
+    vector<int> vec{1,2,3,4,5};
+    print(vec.begin(),vec.end());
     cout<<Sum({1,2,3,4,5})<<endl;
     
     ListNode *p = new ListNode(6);
